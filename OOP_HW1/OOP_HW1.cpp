@@ -2,11 +2,50 @@
 using namespace std;
 
 class Car {
-public:
+private:
     string model;
     int year;
     float fuel_level = 100.0;
     bool is_running;
+
+public:
+    // getters
+    string GetModel() {
+        return model;
+    }
+    int GetYear() {
+        return year;
+    }
+    float GetFuel_level () {
+        return fuel_level;
+    }
+    bool GetIs_running() {
+        return is_running;
+    }
+
+    // setters
+    void SetModel(string nModel) {
+        model = nModel;
+    }
+    void SetYear(int nYear) {
+        if (nYear < 1886 || nYear > 2025) {
+            cout << "Incorrect year\n";
+        }
+        else {
+            year = nYear;
+        }
+    }
+    void SetFuel_level(float nFuel_level) {
+        if (nFuel_level < 0 || nFuel_level > 100) {
+            cout << "Incorrect fuel level\n";
+        }
+        else {
+            fuel_level = nFuel_level;
+        }
+    }
+    void SetIs_running(bool nIs_running) {
+        is_running = nIs_running;
+    }
 
     void StartEngine() {
         if (!is_running) {
@@ -37,10 +76,38 @@ public:
 };
 
 class Robot {
-public:
+private:
     string name;
     int battery_level = 100;
     bool is_active;
+
+public:
+    // getters
+    string getName() {
+        return name;
+    }
+    int getBattery_level() {
+        return battery_level;
+    }
+    bool getIs_active() {
+        return is_active;
+    }
+
+    // setters
+    void setName(string nName) {
+        name = nName;
+    }
+    void setBattery_level(int nBattery_level) {
+        if (nBattery_level < 0 || nBattery_level > 100) {
+            cout << "Incorrect battery level\n";
+        }
+        else {
+            battery_level = nBattery_level;
+        }
+    }
+    void setIs_active(bool nIs_active) {
+        is_active = nIs_active;
+    }
 
     void Work() {
         if (is_active && battery_level > 0) {
@@ -64,11 +131,45 @@ public:
 };
 
 class Tree {
-public:
+private:
     string type;
     float height;
     int water_level = 50;
     bool is_alive;
+
+public:
+    // getters
+    string getType() {
+        return type;
+    }
+    float getHeight() {
+        return height;
+    }
+    int getWater_level() {
+        return water_level;
+    }
+    bool getIs_alive() {
+        return is_alive;
+    }
+
+    // setters
+    void setType(string nType) {
+        type = nType;
+    }
+    void setHeight(float nHeight) {
+        height = (unsigned)nHeight;
+    }
+    void setWater_level(int nWater_level) {
+        if (nWater_level < 0 || nWater_level > 100) {
+            cout << "Incorrect water level\n";
+        }
+        else {
+            water_level = nWater_level;
+        }
+    }
+    void setIs_alive(bool nIs_alive) {
+        is_alive = nIs_alive;
+    }
 
     void Grow() {
         if (is_alive && water_level > 5) {
@@ -98,11 +199,45 @@ public:
 };
 
 class Airplane {
-public:
+private:
     string flight_number;
     int altitude;
     float fuel = 1000.0;
     bool is_flying;
+
+public:
+    // getters
+    string getFlight_number() {
+        return flight_number;
+    }
+    int getAltitude() {
+        return altitude;
+    }
+    float getFuel() {
+        return fuel;
+    }
+    bool getIs_flying() {
+        return is_flying;
+    }
+
+    // setters
+    void setFlight_number(string nFlight_number) {
+        flight_number = nFlight_number;
+    }
+    void setAltitude(int nAltitude) {
+        altitude = nAltitude;
+    }
+    void setFuel(float nFuel) {
+        if (nFuel < 0 || nFuel > 1000) {
+            cout << "Incorrect fuel value\n";
+        }
+        else {
+            fuel = nFuel;
+        }
+    }
+    void setIs_flying(bool nIs_flying) {
+        is_flying = nIs_flying;
+    }
 
     void TakeOff() {
         if (!is_flying && fuel > 100) {
@@ -134,11 +269,44 @@ public:
 };
 
 class Book {
-public:
+private:
     string title;
     int pages;
     int current_page = 0;
     bool is_open;
+
+public:
+    // getters
+    string getTitle() {
+        return title;
+    }
+    int getPages() {
+        return pages;
+    }
+    int getCurrent_page() {
+        return current_page;
+    }
+    bool getIs_open() {
+        return is_open;
+    }
+    // setters
+    void setTitle(string nTitle) {
+        title = nTitle;
+    }
+    void setPages(int nPages) {
+        pages = (unsigned)nPages;
+    }
+    void setCurrent_page(int nCurrent_page) {
+        if (nCurrent_page > pages || nCurrent_page < 0) {
+            cout << "Incorrect current page\n";
+        }
+        else {
+            current_page = nCurrent_page;
+        }
+    }
+    void setIs_open(bool nIs_open) {
+        is_open = nIs_open;
+    }
 
     void Open() {
         if (!is_open) {
@@ -170,48 +338,4 @@ public:
     }
 };
 
-int main() {
-    Car car;
-    car.model = "Toyota";
-    car.year = 2020;
-    car.fuel_level = 80.0;
-    car.is_running = false;
-    car.StartEngine();
-    car.Drive();
-    car.Refuel();
-
-    Robot robot;
-    robot.name = "Robo";
-    robot.battery_level = 90;
-    robot.is_active = true;
-    robot.Work();
-    robot.OnOff();
-    robot.Recharge();
-
-    Tree tree;
-    tree.type = "Oak";
-    tree.height = 10.0;
-    tree.water_level = 60;
-    tree.is_alive = true;
-    tree.Grow();
-    tree.Water();
-    tree.CheckHealth();
-
-    Airplane airplane;
-    airplane.flight_number = "123";
-    airplane.altitude = 0;
-    airplane.fuel = 800.0;
-    airplane.is_flying = false;
-    airplane.TakeOff();
-    airplane.Land();
-    airplane.Refuel();
-
-    Book book;
-    book.title = "The Hobbit";
-    book.pages = 300;
-    book.current_page = 0;
-    book.is_open = false;
-    book.Open();
-    book.Read();
-    book.Close();
-}
+int main() {}
