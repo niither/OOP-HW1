@@ -13,9 +13,9 @@ public:
     bool getIs_active();
 
     // setters
-    void setName(string nName);
-    void setBattery_level(int nBattery_level);
-    void setIs_active(bool nIs_active);
+    void setName(string name);
+    void setBattery_level(int battery_level);
+    void setIs_active(bool is_active);
 
     void Work();
     void Recharge();

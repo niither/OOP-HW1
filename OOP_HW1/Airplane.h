@@ -15,11 +15,12 @@ public:
     bool getIs_flying();
 
     // setters
-    void setFlight_number(string nFlight_number);
-    void setAltitude(int nAltitude);
-    void setFuel(float nFuel);
-    void setIs_flying(bool nIs_flying);
+    void setFlight_number(string flight_number);
+    void setAltitude(int altitude);
+    void setFuel(float fuel);
+    void setIs_flying(bool is_flying);
 
     void TakeOff();
     void Land();
     void Refuel();
+}

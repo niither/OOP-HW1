@@ -15,27 +15,27 @@ bool Car::GetIs_running() {
 }
 
 // setters
-void Car::SetModel(string nModel) {
-    model = nModel;
+void Car::SetModel(string model) {
+    this->model = model;
 }
-void Car::SetYear(int nYear) {
-    if (nYear < 1886 || nYear > 2025) {
+void Car::SetYear(int year) {
+    if (year < 1886 || year > 2025) {
         cout << "Incorrect year\n";
     }
     else {
-        year = nYear;
+        this->year = year;
     }
 }
-void Car::SetFuel_level(float nFuel_level) {
-    if (nFuel_level < 0 || nFuel_level > 100) {
+void Car::SetFuel_level(float fuel_level) {
+    if (fuel_level < 0 || fuel_level > 100) {
         cout << "Incorrect fuel level\n";
     }
     else {
-        fuel_level = nFuel_level;
+        this->fuel_level = fuel_level;
     }
 }
-void Car::SetIs_running(bool nIs_running) {
-    is_running = nIs_running;
+void Car::SetIs_running(bool is_running) {
+    this->is_running = is_running;
 }
 
 void Car::StartEngine() {

@@ -15,10 +15,10 @@ public:
     bool GetIs_running();
 
     // setters
-    void SetModel(string nModel);
-    void SetYear(int nYear);
-    void SetFuel_level(float nFuel_level);
-    void SetIs_running(bool nIs_running);
+    void SetModel(string model);
+    void SetYear(int year);
+    void SetFuel_level(float fuel_level);
+    void SetIs_running(bool is_running);
 
     void StartEngine();
     void Drive();

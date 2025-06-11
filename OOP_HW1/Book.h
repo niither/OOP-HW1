@@ -14,10 +14,10 @@ public:
     int getCurrent_page();
     bool getIs_open();
     // setters
-    void setTitle(string nTitle);
-    void setPages(int nPages);
-    void setCurrent_page(int nCurrent_page);
-    void setIs_open(bool nIs_open);
+    void setTitle(string title);
+    void setPages(int pages);
+    void setCurrent_page(int current_page);
+    void setIs_open(bool is_open);
 
     void Open();
     void Read();

@@ -15,22 +15,22 @@ bool Airplane::getIs_flying() {
 }
 
 // setters
-void Airplane::setFlight_number(string nFlight_number) {
-    flight_number = nFlight_number;
+void Airplane::setFlight_number(string flight_number) {
+    this->flight_number = flight_number;
 }
-void Airplane::setAltitude(int nAltitude) {
-    altitude = nAltitude;
+void Airplane::setAltitude(int altitude) {
+    this->altitude = altitude;
 }
-void Airplane::setFuel(float nFuel) {
-    if (nFuel < 0 || nFuel > 1000) {
+void Airplane::setFuel(float fuel) {
+    if (fuel < 0 || fuel > 1000) {
         cout << "Incorrect fuel value\n";
     }
     else {
-        fuel = nFuel;
+        this->fuel = fuel;
     }
 }
-void Airplane::setIs_flying(bool nIs_flying) {
-    is_flying = nIs_flying;
+void Airplane::setIs_flying(bool is_flying) {
+    this->is_flying = is_flying;
 }
 
 void Airplane::TakeOff() {

@@ -15,22 +15,22 @@ bool Tree::getIs_alive() {
 }
 
 // setters
-void Tree::setType(string nType) {
-    type = nType;
+void Tree::setType(string type) {
+    this->type = type;
 }
-void Tree::setHeight(float nHeight) {
-    height = (unsigned)nHeight;
+void Tree::setHeight(float height) {
+    this->height = (unsigned)height;
 }
-void Tree::setWater_level(int nWater_level) {
-    if (nWater_level < 0 || nWater_level > 100) {
+void Tree::setWater_level(int water_level) {
+    if (water_level < 0 || water_level > 100) {
         cout << "Incorrect water level\n";
     }
     else {
-        water_level = nWater_level;
+        this->water_level = water_level;
     }
 }
-void Tree::setIs_alive(bool nIs_alive) {
-    is_alive = nIs_alive;
+void Tree::setIs_alive(bool is_alive) {
+    this->is_alive = is_alive;
 }
 
 void Tree::Grow() {

@@ -14,22 +14,22 @@ bool Book::getIs_open() {
     return is_open;
 }
 // setters
-void Book::setTitle(string nTitle) {
-    title = nTitle;
+void Book::setTitle(string title) {
+    this->title = title;
 }
-void Book::setPages(int nPages) {
-    pages = (unsigned)nPages;
+void Book::setPages(int pages) {
+    this->pages = (unsigned)pages;
 }
-void Book::setCurrent_page(int nCurrent_page) {
-    if (nCurrent_page > pages || nCurrent_page < 0) {
+void Book::setCurrent_page(int current_page) {
+    if (current_page > pages || current_page < 0) {
         cout << "Incorrect current page\n";
     }
     else {
-        current_page = nCurrent_page;
+        this->current_page = current_page;
     }
 }
-void Book::setIs_open(bool nIs_open) {
-    is_open = nIs_open;
+void Book::setIs_open(bool is_open) {
+    this->is_open = is_open;
 }
 
 void Book::Open() {

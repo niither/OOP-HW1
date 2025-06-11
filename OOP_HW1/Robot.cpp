@@ -12,19 +12,19 @@ bool Robot::getIs_active() {
 }
 
 // setters
-void Robot::setName(string nName) {
-    name = nName;
+void Robot::setName(string name) {
+    this->name = name;
 }
-void Robot::setBattery_level(int nBattery_level) {
-    if (nBattery_level < 0 || nBattery_level > 100) {
+void Robot::setBattery_level(int battery_level) {
+    if (battery_level < 0 || battery_level > 100) {
         cout << "Incorrect battery level\n";
     }
     else {
-        battery_level = nBattery_level;
+        this->battery_level = battery_level;
     }
 }
-void Robot::setIs_active(bool nIs_active) {
-    is_active = nIs_active;
+void Robot::setIs_active(bool is_active) {
+    this->is_active = is_active;
 }
 
 void Robot::Work() {

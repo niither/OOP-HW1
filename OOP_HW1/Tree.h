@@ -15,10 +15,10 @@ public:
     bool getIs_alive();
 
     // setters
-    void setType(string nType);
-    void setHeight(float nHeight);
-    void setWater_level(int nWater_level);
-    void setIs_alive(bool nIs_alive);
+    void setType(string type);
+    void setHeight(float height);
+    void setWater_level(int water_level);
+    void setIs_alive(bool is_alive);
 
     void Grow();
     void Water();
